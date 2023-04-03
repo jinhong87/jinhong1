@@ -1,2 +1,55 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>실습3-2</title>
+	<style>
+
+	#listm{
+		text-align: center;
+		padding: 15px 20px;
+		margin: auto;
+		width: 50%;
+		background-color: SandyBrown;
+		
+	}
+	
+	#todolist{
+		text-align: center;
+		padding: 20px 20px;
+		margin: auto;
+		width: 50%;
+		background-color: White;
+		
+	}
+
+</style>
+</head>
+<script >
+ 	function addItem(){
+ 		let todo = document.getElementById("item");
+ 		let list = document.getElementById("todolist");	
+ 		let listitem = document.createElement("li");
+ 		listitem.className
+ 			= "d-flex list-group-item list-group-item-action list-group-item-warnig";
+ 		listitem.innerText - todo.value;
+ 		list.appendChild(listitem);
+ 		todo.value ="";
+ 		todo.focus();
+ 	} 
+ 
+ </script>
+<body>
+<div id = "listm">
+	<h2>My ToDo App</h2>
+	<hr>
+	<diV class= "input-group">
+		<input id = "item" class= "form-control" type = "text" placeholder= "할일을 입력하세요..." size= "50">
+		<button type = "button" class = "btn btn-primary" onclick = "addItem()">할일추가</button>
+	</div>
+	<hr>
+	<ul id= "todolist" class= "list-group"></ul>
+  </div>
+
+</body>
+</html>
